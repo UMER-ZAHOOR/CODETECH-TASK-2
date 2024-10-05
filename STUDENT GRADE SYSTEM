@@ -1,0 +1,50 @@
+print("Enter Marks Obtained in 5 Subjects: ")
+markOne = int(input("Enter mark for subject 1: "))
+markTwo = int(input("Enter mark for subject 2: "))
+markThree = int(input("Enter mark for subject 3: "))
+markFour = int(input("Enter mark for subject 4: "))
+markFive = int(input("Enter mark for subject 5: "))
+
+# Calculate total and average marks
+tot = markOne + markTwo + markThree + markFour + markFive
+avg = tot / 5
+
+# Determine the grade based on the average marks
+if avg >= 91 and avg <= 100:
+    grade = "A1"
+elif avg >= 81 and avg < 91:
+    grade = "A2"
+elif avg >= 71 and avg < 81:
+    grade = "B1"
+elif avg >= 61 and avg < 71:
+    grade = "B2"
+elif avg >= 51 and avg < 61:
+    grade = "C1"
+elif avg >= 41 and avg < 51:
+    grade = "C2"
+elif avg >= 33 and avg < 41:
+    grade = "D"
+elif avg >= 21 and avg < 33:
+    grade = "E1"
+elif avg >= 0 and avg < 21:
+    grade = "E2"
+else:
+    print("Invalid Input!")
+    exit()
+
+# Print the results
+print("Total Marks:", tot)
+print("Average Marks:", avg)
+print("Your Grade is", grade)
+
+# Additional features:
+print("\nAdditional Information:")
+if avg >= 90:
+    print("You have achieved a distinction!")
+elif avg >= 80:
+    print("You have achieved a credit!")
+elif avg >= 70:
+    print("You have achieved a pass!")
+
+if avg < 40:
+    print("You need to improve your performance!")
